@@ -1,0 +1,1 @@
+let initializePage = new InitializePage;
