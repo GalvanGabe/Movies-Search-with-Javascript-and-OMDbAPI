@@ -176,24 +176,30 @@ class InitializePage {
 
         this.lastMovie = this.targetMovie;
 
-        if (json.Response == 'False') {
-            alert('Movie not found!')
-            return
-        } else if (json.totalResults > 10) {
-            this.btnMoreMovies.classList.remove('hidden')
-            if (this.countPageBtn > 1) {
-                this.btnReturnMovies.classList.remove('hidden')
-            } else {
-                this.btnReturnMovies.classList.add('hidden')
-            }
-        }
-
         const list = document.querySelector('div.row');
         list.innerHTML = '';
 
+        if (json.Response == 'False') {
+            alert('Movie not found!');
+            this.btnMoreMovies.classList.add('hidden');
+            this.btnReturnMovies.classList.add('hidden');
+            list.innerHTML = '';
+            return
+        } else if (json.totalResults > 10) {
+            this.btnMoreMovies.classList.remove('hidden');
+            if (this.countPageBtn > 1) {
+                this.btnReturnMovies.classList.remove('hidden');
+            } else {
+                this.btnReturnMovies.classList.add('hidden');
+            }
+        } else if (json.totalResults <= 10) {
+            this.btnMoreMovies.classList.add('hidden');
+            this.btnReturnMovies.classList.add('hidden');
+        }
+
         let movieAndPage = document.createElement('h2');
         movieAndPage.classList.add('text-center');
-        movieAndPage.innerHTML = `'${this.targetMovie}' Search Results, page nº${this.countPageBtn}.`;
+        movieAndPage.innerHTML = `'${this.targetMovie}' Search results, page nº${this.countPageBtn}.`;
         list.appendChild(movieAndPage);
         
         json.Search.forEach(element => {
