@@ -2,7 +2,7 @@ class InitializePage {
 
     constructor(){
 
-        this.apiKey = /* Enter your OMDbAPI key here */
+        this.apiKey = /* Enter your OMDbAPI key here. https://www.omdbapi.com/ */
         this.imgDefaultMoviePoster = "https://eticketsolutions.com/demo/themes/e-ticket/img/movie.jpg";
         this.searchForm = document.querySelector('form');
         this.pageNumber = '1';
