@@ -22,7 +22,7 @@ O Movies Search Page é uma aplicação web que consiste em uma página de pesqu
 - CSS
 - JS
 - Bootstrap
-- OMDbAPI
+- OMDbAPI https://www.omdbapi.com/
 
 # author / Autor
 
