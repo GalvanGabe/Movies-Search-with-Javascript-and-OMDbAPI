@@ -1,5 +1,5 @@
 # Movies Search Page 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/GalvanGabe/Movie_Search-Pesquisa_de_Filmes/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/GalvanGabe/Movies_Search_JS/blob/main/LICENSE) 
 
 # About the project
 
